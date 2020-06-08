@@ -132,4 +132,7 @@
       <Name>CollapsibleToolbar</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BackWhite.png" />
+  </ItemGroup>
 </Project>

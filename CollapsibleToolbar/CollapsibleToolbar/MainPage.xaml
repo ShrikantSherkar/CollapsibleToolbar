@@ -1,12 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="CollapsibleToolbar.MainPage">
+<ContentPage
+    x:Class="CollapsibleToolbar.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
 
-    <Grid>
-        
+    <Grid
+        x:Name="ContentGrid"
+        ColumnSpacing="0"
+        RowSpacing="0">
+
+        <ScrollView x:Name="TheScroll">
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition x:Name="ImageRow" Height="200" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <BoxView
+                    x:Name="collapsibleContent"
+                    Grid.Row="0"
+                    Color="#FF264778" />
+                <Label 
+                    x:Name="longText"
+                    Grid.Row="1"
+                    Margin="12,5,12,5"
+                    FontSize="Medium"
+                    LineBreakMode="WordWrap"
+                    Text="&#10;&#10;Bears are mammals of the family Ursidae. Bears are classified as caniforms, or doglike carnivorans, with the pinnipeds being their closest living relatives. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, Central America, South America, Europe, and Asia.  &#10;&#10;Common characteristics of modern bears include large bodies with stocky legs, long snouts, shaggy hair, plantigrade paws with five nonretractile claws, and short tails. While the polar bear is mostly carnivorous and the giant panda feeds almost entirely on bamboo, the remaining six species are omnivorous, with varied diets.  &#10;&#10;With the exceptions of courting individuals and mothers with their young, bears are typically solitary animals. They are generally diurnal, but may be active during the night (nocturnal) or twilight (crepuscular), particularly around humans. Bears are aided by an excellent sense of smell, and despite their heavy build and awkward gait, they can run quickly and are adept climbers and swimmers. In autumn, some bear species forage large amounts of fermented fruits, which affects their behaviour.[1] Bears use shelters, such as caves and burrows, as their dens; most species occupy their dens during the winter for a long period (up to 100 days) of sleep similar to hibernation.[2]  &#10;&#10;Bears have been hunted since prehistoric times for their meat and fur. With their tremendous physical presence and charisma, they play a prominent role in the arts, mythology, and other cultural aspects of various human societies. In modern times, the bears' existence has been pressured through the encroachment on their habitats and the illegal trade of bears and bear parts, including the Asian bile bear market. The IUCN lists six bear species as vulnerable or endangered, and even least concern species, such as the brown bear, are at risk of extirpation in certain countries. The poaching and international trade of these most threatened populations are prohibited, but still ongoing." />
+
+            </Grid>
+
+        </ScrollView>
+
+        <StackLayout
+            x:Name="toolbarStack"
+            BackgroundColor="#FF264778"
+            HeightRequest="55"
+            Spacing="0"
+            VerticalOptions="Start">
+
+            <Label
+                x:Name="headerLbl"
+                Margin="40,0,0,0"
+                FontSize="16"
+                Text="Home"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                VerticalTextAlignment="Center" />
+
+        </StackLayout>
+
+        <ImageButton
+            Margin="10,17,0,0"
+            BackgroundColor="Transparent"
+            HeightRequest="22"
+            HorizontalOptions="Start"
+            Source="BackWhite.png"
+            VerticalOptions="Start"
+            WidthRequest="22" />
+
     </Grid>
+
+
 </ContentPage>
